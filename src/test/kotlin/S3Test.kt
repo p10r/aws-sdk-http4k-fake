@@ -19,7 +19,7 @@ class S3Test {
     @Test
     fun works() {
         val bucketName = BucketName.of("example-bucket")
-        val s3 = FakeS3().apply {
+        FakeS3().apply {
             s3Client().createBucket(bucketName, Region.EU_CENTRAL_1)
             debug().asServer(SunHttp(port = 26467)).start()
         }
