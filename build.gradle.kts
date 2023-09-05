@@ -11,6 +11,8 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("software.amazon.awssdk:s3:2.20.140")
+    implementation("org.http4k:http4k-connect-amazon-s3-fake:5.1.6.2")
 }
 
 tasks.test {
@@ -18,5 +20,5 @@ tasks.test {
 }
 
 kotlin {
-    jvmToolchain(8)
+    jvmToolchain(11)
 }
